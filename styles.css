@@ -1,0 +1,254 @@
+/* Main Styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: red;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: 0.5em 0;
+}
+
+.btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+/* Header Showcase */
+
+#showcase {
+  min-height: 450px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: url('images/3T_Ver_2_Trans.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+  
+}
+
+#showcase h1 {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+  background: #eaeaea;
+  color:red;
+  padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b {
+  padding: 2em 1em 1em;
+}
+
+#section-b ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#section-b li {
+  margin-bottom: 1em;
+  background: #fff;
+  color:red;
+}
+
+.card-content {
+  padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+  background: #fff;
+  color: #333;
+  padding: 2em;
+}
+
+/* Section D / Boxes */
+
+#section-d .box {
+  padding: 2em;
+  color: #fff;
+}
+
+#section-d .box:first-child {
+  background: green;
+}
+
+/* Footer */
+
+#main-footer {
+  padding: 2em;
+  background: purple;
+  color: #fff;
+  text-align: center;
+}
+
+#main-footer a {
+  color: #2690d4;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  #section-a .content-text {
+    columns: 2;
+    column-gap: 2em;
+  }
+
+  #section-a .content-text p {
+    padding-top: 0;
+  }
+
+  .content-wrap,
+  #section-b ul {
+    grid-column: 2/4;
+  }
+
+  .box,
+  #main-footer div {
+    grid-column: span 2;
+  }
+
+  #section-b ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #section-b li {
+    width: 31%;
+  }
+}
+ /* Popup container */
+ .popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
